@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Employee Dashboard | Bean Haven Coffee</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<link rel="stylesheet" href="css/employee-dashboard.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header>
+
+
+<nav class="dashboard-navbar">
+
+
+<div class="logo">
+
+<i class="fas fa-mug-hot"></i>
+
+<span>
+Bean Haven Staff
+</span>
+
+</div>
+
+
+
+
+<div class="employee-actions">
+
+
+<a href="index.html">
+
+<i class="fas fa-home"></i>
+
+Home
+
+</a>
+
+
+
+<button id="employeeLogout">
+
+<i class="fas fa-sign-out-alt"></i>
+
+Logout
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+
+<!-- ================= EMPLOYEE DASHBOARD ================= -->
+
+
+
+<section class="employee-dashboard">
+
+
+
+
+
+<!-- SIDEBAR -->
+
+
+<aside class="employee-sidebar">
+
+
+<div class="employee-profile">
+
+
+<img src="images/employee.jpg"
+alt="Employee">
+
+
+<h3>
+Daniel Brown
+</h3>
+
+
+<p>
+Head Barista
+</p>
+
+
+</div>
+
+
+
+
+
+<ul>
+
+
+<li class="active">
+
+<i class="fas fa-chart-pie"></i>
+
+Dashboard
+
+</li>
+
+
+
+<li>
+
+<i class="fas fa-shopping-cart"></i>
+
+Orders
+
+</li>
+
+
+
+<li>
+
+<i class="fas fa-mug-hot"></i>
+
+Coffee Preparation
+
+</li>
+
+
+
+<li>
+
+<i class="fas fa-box"></i>
+
+Inventory
+
+</li>
+
+
+
+<li>
+
+<i class="fas fa-users"></i>
+
+Customers
+
+</li>
+
+
+
+<li>
+
+<i class="fas fa-calendar-check"></i>
+
+Schedule
+
+</li>
+
+
+
+<li>
+
+<i class="fas fa-user-circle"></i>
+
+Profile
+
+</li>
+
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<!-- MAIN CONTENT -->
+
+
+<main class="employee-content">
+
+
+
+<h1>
+Good Morning, Daniel ☕
+</h1>
+
+
+<p>
+Manage today's coffee orders and daily activities.
+</p>
+
+
+
+
+
+
+
+
+
+<!-- SUMMARY CARDS -->
+
+
+
+<div class="employee-cards">
+
+
+
+<div class="employee-card">
+
+
+<i class="fas fa-receipt"></i>
+
+
+<div>
+
+
+<h2>
+28
+</h2>
+
+
+<p>
+Today's Orders
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="employee-card">
+
+
+<i class="fas fa-clock"></i>
+
+
+<div>
+
+
+<h2>
+8
+</h2>
+
+
+<p>
+Pending Orders
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="employee-card">
+
+
+<i class="fas fa-check-circle"></i>
+
+
+<div>
+
+
+<h2>
+45
+</h2>
+
+
+<p>
+Completed Orders
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="employee-card">
+
+
+<i class="fas fa-star"></i>
+
+
+<div>
+
+
+<h2>
+4.9
+</h2>
+
+
+<p>
+Customer Rating
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ACTIVE ORDERS -->
+
+
+
+<section class="employee-section">
+
+
+
+<div class="section-header">
+
+
+<h2>
+Active Orders
+</h2>
+
+
+<button>
+View All
+</button>
+
+
+</div>
+
+
+
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+<th>
+Order
+</th>
+
+
+<th>
+Customer
+</th>
+
+
+<th>
+Items
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody>
+
+
+<tr>
+
+
+<td>
+#BH2035
+</td>
+
+
+<td>
+Emma Wilson
+</td>
+
+
+<td>
+Latte + Muffin
+</td>
+
+
+<td>
+
+<span class="pending">
+Preparing
+</span>
+
+</td>
+
+
+<td>
+
+<button class="complete-btn">
+
+Complete
+
+</button>
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<td>
+#BH2036
+</td>
+
+
+<td>
+John Smith
+</td>
+
+
+<td>
+Cappuccino
+</td>
+
+
+<td>
+
+<span class="warning">
+Waiting
+
+</span>
+
+</td>
+
+
+<td>
+
+<button class="complete-btn">
+
+Start
+
+</button>
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<td>
+#BH2037
+</td>
+
+
+<td>
+Sarah Lee
+</td>
+
+
+<td>
+Cold Brew
+</td>
+
+
+<td>
+
+<span class="success">
+
+Ready
+
+</span>
+
+</td>
+
+
+<td>
+
+<button class="complete-btn">
+
+Deliver
+
+</button>
+
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- TASK SECTION -->
+
+
+
+<section class="employee-section">
+
+
+<h2>
+Today's Tasks
+</h2>
+
+
+
+
+<div class="task-container">
+
+
+<div class="task-card">
+
+
+<i class="fas fa-coffee"></i>
+
+
+<h3>
+Prepare Coffee Station
+
+</h3>
+
+
+<p>
+Complete before opening hours.
+</p>
+
+
+<input type="checkbox">
+
+Completed
+
+</div>
+
+
+
+
+
+
+<div class="task-card">
+
+
+<i class="fas fa-boxes-stacked"></i>
+
+
+<h3>
+Check Inventory
+
+</h3>
+
+
+<p>
+Verify coffee beans and supplies.
+</p>
+
+
+<input type="checkbox">
+
+Completed
+
+</div>
+
+
+
+
+
+
+
+<div class="task-card">
+
+
+<i class="fas fa-broom"></i>
+
+
+<h3>
+Clean Work Area
+
+</h3>
+
+
+<p>
+Maintain hygiene standards.
+</p>
+
+
+<input type="checkbox">
+
+Completed
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- INVENTORY STATUS -->
+
+
+
+<section class="employee-section">
+
+
+<h2>
+Inventory Status
+</h2>
+
+
+
+<div class="inventory-grid">
+
+
+<div class="inventory-card">
+
+
+<i class="fas fa-coffee"></i>
+
+
+<h3>
+Coffee Beans
+</h3>
+
+
+<p>
+85% Remaining
+</p>
+
+
+<div class="progress">
+
+<span style="width:85%"></span>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="inventory-card">
+
+
+<i class="fas fa-droplet"></i>
+
+
+<h3>
+Milk Supply
+</h3>
+
+
+<p>
+45% Remaining
+</p>
+
+
+<div class="progress">
+
+<span style="width:45%"></span>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="inventory-card">
+
+
+<i class="fas fa-cookie"></i>
+
+
+<h3>
+Bakery Items
+</h3>
+
+
+<p>
+70% Remaining
+</p>
+
+
+<div class="progress">
+
+<span style="width:70%"></span>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CUSTOMER FEEDBACK -->
+
+
+<section class="employee-section">
+
+
+<h2>
+Recent Customer Feedback
+</h2>
+
+
+
+<div class="feedback">
+
+
+<div>
+
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star"></i>
+
+
+<p>
+"Excellent coffee and quick service!"
+</p>
+
+
+<h4>
+- Emma Wilson
+</h4>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star"></i>
+
+<i class="fas fa-star-half"></i>
+
+
+<p>
+"Great taste and friendly staff."
+</p>
+
+
+<h4>
+- John Smith
+</h4>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+
+<p class="copyright">
+
+© 2026 Bean Haven Coffee Employee Portal.
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+document
+.getElementById("employeeLogout")
+.onclick=function(){
+
+
+alert("Employee logged out successfully.");
+
+
+window.location.href="employee-login.html";
+
+
+};
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

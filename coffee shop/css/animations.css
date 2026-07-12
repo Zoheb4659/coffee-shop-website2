@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ================= PAGE LOAD ANIMATION ================= */
+
+
+body{
+
+    animation:pageFade .8s ease;
+
+}
+
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* ================= COFFEE STEAM ANIMATION ================= */
+
+
+.cup{
+
+    position:relative;
+
+}
+
+
+
+.steam{
+
+    position:absolute;
+    width:8px;
+    height:60px;
+    background:rgba(255,255,255,.7);
+    border-radius:50%;
+    filter:blur(2px);
+    animation:steamRise 3s infinite ease-in-out;
+
+}
+
+
+
+.steam1{
+
+    left:35%;
+    animation-delay:0s;
+
+}
+
+
+.steam2{
+
+    left:50%;
+    height:70px;
+    animation-delay:.7s;
+
+}
+
+
+.steam3{
+
+    left:65%;
+    animation-delay:1.4s;
+
+}
+
+
+
+@keyframes steamRise{
+
+
+0%{
+
+    opacity:0;
+    transform:translateY(20px) scale(.5);
+
+}
+
+
+50%{
+
+    opacity:1;
+
+}
+
+
+100%{
+
+    opacity:0;
+    transform:translateY(-80px) scale(1.2);
+
+}
+
+}
+
+
+
+
+/* ================= FLOATING COFFEE BEANS ================= */
+
+
+.beans span{
+
+    position:absolute;
+    width:25px;
+    height:35px;
+    background:#6f3c1f;
+    border-radius:50%;
+    animation:beanFloat 8s infinite ease-in-out;
+    opacity:.8;
+
+}
+
+
+
+.beans span:nth-child(1){
+
+    top:20%;
+    left:10%;
+    animation-delay:0s;
+
+}
+
+
+.beans span:nth-child(2){
+
+    top:60%;
+    left:20%;
+    animation-delay:2s;
+
+}
+
+
+.beans span:nth-child(3){
+
+    top:30%;
+    right:15%;
+    animation-delay:4s;
+
+}
+
+
+.beans span:nth-child(4){
+
+    bottom:20%;
+    right:30%;
+    animation-delay:1s;
+
+}
+
+
+.beans span:nth-child(5){
+
+    top:50%;
+    right:5%;
+    animation-delay:3s;
+
+}
+
+
+.beans span:nth-child(6){
+
+    bottom:10%;
+    left:40%;
+    animation-delay:5s;
+
+}
+
+
+
+@keyframes beanFloat{
+
+
+0%{
+
+transform:translateY(0) rotate(0);
+
+}
+
+
+50%{
+
+transform:translateY(-50px) rotate(180deg);
+
+}
+
+
+100%{
+
+transform:translateY(0) rotate(360deg);
+
+}
+
+}
+
+
+
+/* ================= SLIDE ANIMATIONS ================= */
+
+
+.slide-left{
+
+animation:slideLeft 1s ease;
+
+}
+
+
+
+@keyframes slideLeft{
+
+
+from{
+
+opacity:0;
+transform:translateX(-80px);
+
+}
+
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+
+}
+
+
+
+
+
+.slide-right{
+
+animation:slideRight 1s ease;
+
+}
+
+
+
+@keyframes slideRight{
+
+
+from{
+
+opacity:0;
+transform:translateX(80px);
+
+}
+
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+
+
+
+
+.slide-up{
+
+animation:slideUp 1s ease;
+
+}
+
+
+
+@keyframes slideUp{
+
+
+from{
+
+opacity:0;
+transform:translateY(80px);
+
+}
+
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+/* ================= ZOOM EFFECT ================= */
+
+
+.zoom-in{
+
+animation:zoomIn .8s ease;
+
+}
+
+
+
+@keyframes zoomIn{
+
+
+from{
+
+opacity:0;
+transform:scale(.7);
+
+}
+
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+/* ================= CARD HOVER EFFECT ================= */
+
+
+.card,
+.menu-card,
+.feature-card,
+.dashboard-card,
+.admin-card,
+.employee-card{
+
+transition:.4s ease;
+
+}
+
+
+
+.card:hover,
+.menu-card:hover,
+.feature-card:hover,
+.dashboard-card:hover,
+.admin-card:hover,
+.employee-card:hover{
+
+
+transform:translateY(-12px) scale(1.03);
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.18);
+
+
+}
+
+
+
+
+
+/* ================= BUTTON ANIMATION ================= */
+
+
+button,
+.btn{
+
+position:relative;
+overflow:hidden;
+
+}
+
+
+
+button::before,
+.btn::before{
+
+
+content:"";
+
+position:absolute;
+
+width:0;
+height:0;
+
+background:rgba(255,255,255,.3);
+
+border-radius:50%;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+
+transition:.5s;
+
+
+}
+
+
+
+
+button:hover::before,
+.btn:hover::before{
+
+
+width:300px;
+
+height:300px;
+
+
+}
+
+
+
+
+
+/* ================= GLOW EFFECT ================= */
+
+
+.glow{
+
+
+animation:glow 2s infinite alternate;
+
+
+}
+
+
+
+@keyframes glow{
+
+
+from{
+
+box-shadow:
+
+0 0 10px #c98b52;
+
+}
+
+
+to{
+
+
+box-shadow:
+
+0 0 30px #6f3c1f;
+
+
+}
+
+
+}
+
+
+
+
+
+/* ================= LOADING ANIMATION ================= */
+
+
+#loader{
+
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#fff7ef;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+z-index:9999;
+
+animation:loaderHide 3s forwards;
+
+}
+
+
+
+@keyframes loaderHide{
+
+
+0%,80%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+opacity:0;
+visibility:hidden;
+
+}
+
+
+}
+
+
+
+
+
+/* ================= PROFILE IMAGE ANIMATION ================= */
+
+
+.profile img,
+.employee-profile img,
+.admin-profile img{
+
+
+animation:pulse 3s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+/* ================= COUNTER ANIMATION ================= */
+
+
+.stat-box h2,
+.dashboard-card h2,
+.admin-card h2,
+.employee-card h2{
+
+
+animation:numberPop 1.5s ease;
+
+}
+
+
+
+@keyframes numberPop{
+
+
+from{
+
+transform:scale(.5);
+opacity:0;
+
+}
+
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+/* ================= FLOATING ICONS ================= */
+
+
+.feature-card i,
+.dashboard-card i,
+.admin-card i,
+.employee-card i{
+
+
+animation:iconFloat 3s infinite ease-in-out;
+
+}
+
+
+
+@keyframes iconFloat{
+
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+
+}
+
+
+
+
+
+
+/* ================= MOBILE REDUCED MOTION ================= */
+
+
+@media(max-width:768px){
+
+
+.hero-left h1{
+
+animation:none;
+
+}
+
+
+
+.beans span{
+
+display:none;
+
+}
+
+
+}

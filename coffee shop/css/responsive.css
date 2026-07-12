@@ -1,0 +1,674 @@
+@media(max-width:1200px){
+
+
+/* ================= GLOBAL ================= */
+
+
+.navbar,
+.dashboard-navbar,
+.admin-navbar{
+
+    width:95%;
+
+}
+
+
+
+.hero{
+
+    padding:50px 5%;
+
+}
+
+
+
+.hero-left h1{
+
+    font-size:48px;
+
+}
+
+
+
+/* MENU */
+
+.menu-container,
+.menu-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+
+
+/* FEATURES */
+
+.features{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+/* DASHBOARDS */
+
+
+.dashboard,
+.admin-dashboard,
+.employee-dashboard{
+
+    width:95%;
+
+}
+
+
+}
+
+
+
+
+
+/* ================= TABLET ================= */
+
+
+@media(max-width:992px){
+
+
+
+/* NAVIGATION */
+
+
+.nav-links{
+
+    position:absolute;
+
+    top:80px;
+
+    left:-100%;
+
+    width:100%;
+
+    background:white;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:30px;
+
+    transition:.4s;
+
+}
+
+
+
+.nav-links.active{
+
+    left:0;
+
+}
+
+
+
+
+
+/* HERO */
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.hero-left,
+.hero-right{
+
+    width:100%;
+
+}
+
+
+
+.hero-right{
+
+    margin-top:40px;
+
+}
+
+
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+
+
+/* MENU */
+
+
+.menu-container,
+.menu-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+/* ABOUT */
+
+
+.about-section{
+
+    flex-direction:column;
+
+}
+
+
+
+.about-image,
+.about-content{
+
+    width:100%;
+
+}
+
+
+
+
+/* CONTACT */
+
+
+.contact-container{
+
+    flex-direction:column;
+
+}
+
+
+.contact-info,
+.contact-form{
+
+    width:100%;
+
+}
+
+
+
+
+/* AUTH */
+
+
+.auth-section{
+
+    flex-direction:column;
+
+}
+
+
+
+.signup-decoration,
+.employee-left{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+
+.login-box,
+.signup-box,
+.employee-login-box{
+
+    width:90%;
+
+}
+
+
+
+/* DASHBOARD */
+
+
+.dashboard,
+.admin-dashboard,
+.employee-dashboard{
+
+    flex-direction:column;
+
+}
+
+
+
+.sidebar,
+.admin-sidebar,
+.employee-sidebar{
+
+    width:100%;
+
+}
+
+
+
+.dashboard-content,
+.admin-content,
+.employee-content{
+
+    width:100%;
+
+}
+
+
+
+.dashboard-cards,
+.admin-cards,
+.employee-cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+
+
+/* TABLE */
+
+table{
+
+    min-width:700px;
+
+}
+
+
+
+.dashboard-section,
+.admin-section,
+.employee-section{
+
+    overflow-x:auto;
+
+}
+
+
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:600px){
+
+
+
+body{
+
+    font-size:14px;
+
+}
+
+
+
+/* HEADER */
+
+
+.logo{
+
+    font-size:20px;
+
+}
+
+
+.logo i{
+
+    font-size:25px;
+
+}
+
+
+
+.navbar{
+
+    height:70px;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+    min-height:auto;
+
+    padding:40px 20px;
+
+}
+
+
+
+.hero-left h1{
+
+    font-size:34px;
+
+}
+
+
+.hero-left p{
+
+    font-size:15px;
+
+}
+
+
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+
+
+/* TITLES */
+
+
+.title,
+.section-title{
+
+    font-size:28px;
+
+}
+
+
+
+
+
+/* FEATURES */
+
+
+.features{
+
+    grid-template-columns:1fr;
+
+    width:90%;
+
+}
+
+
+
+
+
+/* MENU */
+
+
+.menu-container,
+.menu-grid{
+
+    grid-template-columns:1fr;
+
+    width:90%;
+
+}
+
+
+
+
+
+.card img,
+.menu-card img{
+
+    height:200px;
+
+}
+
+
+
+
+
+/* PAGE BANNER */
+
+
+.page-banner h1{
+
+    font-size:32px;
+
+}
+
+
+
+
+
+/* ABOUT */
+
+
+.about-section{
+
+    padding:30px 20px;
+
+}
+
+
+
+
+/* CONTACT */
+
+
+.contact-section{
+
+    padding:20px;
+
+}
+
+
+
+.input-row{
+
+    flex-direction:column;
+
+}
+
+
+
+
+
+/* NEWSLETTER */
+
+
+.newsletter form{
+
+    flex-direction:column;
+
+}
+
+
+
+.newsletter input,
+.newsletter button{
+
+    width:100%;
+
+}
+
+
+
+
+
+/* AUTH FORMS */
+
+
+.login-box,
+.signup-box,
+.employee-login-box{
+
+    padding:25px;
+
+}
+
+
+
+.login-header h1,
+.signup-header h1{
+
+    font-size:26px;
+
+}
+
+
+
+
+/* DASHBOARD */
+
+
+.dashboard-navbar{
+
+    height:auto;
+
+    padding:15px;
+
+}
+
+
+
+.dashboard-links{
+
+    gap:10px;
+
+}
+
+
+
+.dashboard-cards,
+.admin-cards,
+.employee-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+
+.dashboard-content h1,
+.admin-content h1,
+.employee-content h1{
+
+    font-size:28px;
+
+}
+
+
+
+
+
+/* SIDEBAR */
+
+
+.sidebar,
+.admin-sidebar,
+.employee-sidebar{
+
+    border-radius:15px;
+
+}
+
+
+
+
+/* TABLE */
+
+
+table{
+
+    font-size:13px;
+
+}
+
+
+
+
+/* FOOTER */
+
+
+.footer-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+
+
+}
+
+
+
+
+
+/* ================= SMALL MOBILE ================= */
+
+
+@media(max-width:400px){
+
+
+
+.hero-left h1{
+
+    font-size:28px;
+
+}
+
+
+
+.btn,
+.btn-outline,
+.login-btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+
+.feature-card,
+.card,
+.menu-card{
+
+    padding:15px;
+
+}
+
+
+
+.dashboard-card,
+.admin-card,
+.employee-card{
+
+    padding:20px;
+
+}
+
+
+
+}

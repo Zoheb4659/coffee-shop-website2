@@ -1,0 +1,401 @@
+/* ==========================================
+   Bean Haven Premium CSS
+========================================== */
+
+/* ========= Root Variables ========= */
+:root {
+    --primary: #6f4e37;
+    --secondary: #c08b5c;
+    --bg: #fffaf5;
+    --dark: #2b1d14;
+    --light: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ========= Global Styles ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: #333;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: var(--dark);
+    margin-bottom: 40px;
+}
+
+/* ========= Buttons ========= */
+.btn,
+.btn-outline,
+.order-btn,
+button {
+    padding: 12px 26px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn,
+.order-btn,
+button {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+}
+
+.btn:hover,
+.order-btn:hover,
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* ========= Header ========= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%;
+}
+
+.logo {
+    display: flex;
+    gap: 8px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: 500;
+}
+
+.icons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* ========= Hero Section ========= */
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 110px;
+    background: linear-gradient(#fffaf5, #f6ede4);
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    margin: 18px 0 30px;
+    color: #666;
+    max-width: 540px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.hero-right img {
+    max-width: 520px;
+    margin: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ========= Animations ========= */
+@keyframes float {
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.beans span {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: var(--secondary);
+    border-radius: 50%;
+    opacity: 0.25;
+    animation: rise 15s linear infinite;
+}
+
+.beans span:nth-child(1) {
+    left: 10%;
+}
+
+.beans span:nth-child(2) {
+    left: 30%;
+}
+
+.beans span:nth-child(3) {
+    left: 50%;
+}
+
+.beans span:nth-child(4) {
+    left: 70%;
+}
+
+.beans span:nth-child(5) {
+    left: 85%;
+}
+
+.beans span:nth-child(6) {
+    left: 95%;
+}
+
+@keyframes rise {
+    from {
+        bottom: -20px;
+    }
+
+    to {
+        bottom: 110%;
+        transform: translateX(40px);
+    }
+}
+
+/* ========= Cards & Features ========= */
+.features,
+.menu-container,
+.reviews,
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+.feature-card,
+.card,
+.review {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.feature-card:hover,
+.card:hover,
+.review:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+/* ========= About Section ========= */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    height: 100%;
+}
+
+.about img {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+/* ========= Gallery ========= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.gallery img {
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ========= Newsletter ========= */
+.newsletter {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.newsletter input,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.newsletter input {
+    max-width: 420px;
+}
+
+/* ========= Contact Form ========= */
+.contact-form {
+    max-width: 700px;
+    margin: auto;
+    display: grid;
+    gap: 18px;
+}
+
+/* ========= Footer ========= */
+footer {
+    background: #24170f;
+    color: #fff;
+    padding: 60px 8% 20px;
+}
+
+.footer-container a {
+    display: block;
+    color: #ddd;
+    margin: 6px 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    color: #bbb;
+}
+
+/* ========= Scroll To Top ========= */
+#topBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========= Scrollbar ========= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 900px) {
+
+    .hero,
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+}

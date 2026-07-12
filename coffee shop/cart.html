@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Bean Haven Coffee</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fas fa-mug-hot"></i>
+            <span>Bean Haven</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="active">Cart</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ================= CART ================= -->
+
+<section class="cart-section">
+
+    <h1><i class="fas fa-cart-shopping"></i> Your Shopping Cart</h1>
+
+    <div class="cart-container">
+
+        <!-- Left -->
+
+        <div class="cart-items">
+
+            <!-- Item -->
+
+            <div class="cart-item">
+
+                <img src="images/espresso.jpg" alt="Espresso">
+
+                <div class="item-details">
+
+                    <h3>Classic Espresso</h3>
+
+                    <p>Freshly brewed premium espresso.</p>
+
+                    <h4>₹180</h4>
+
+                </div>
+
+                <div class="quantity-box">
+
+                    <button onclick="decrease(this)">−</button>
+
+                    <span>1</span>
+
+                    <button onclick="increase(this)">+</button>
+
+                </div>
+
+                <button class="remove-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="cart-item">
+
+                <img src="images/cappuccino.jpg" alt="Cappuccino">
+
+                <div class="item-details">
+
+                    <h3>Cappuccino</h3>
+
+                    <p>Rich coffee with creamy milk foam.</p>
+
+                    <h4>₹220</h4>
+
+                </div>
+
+                <div class="quantity-box">
+
+                    <button onclick="decrease(this)">−</button>
+
+                    <span>2</span>
+
+                    <button onclick="increase(this)">+</button>
+
+                </div>
+
+                <button class="remove-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>₹620</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <span>₹50</span>
+            </div>
+
+            <div class="summary-row">
+                <span>GST</span>
+                <span>₹35</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>₹705</span>
+            </div>
+
+            <button class="checkout-btn">
+                <i class="fas fa-credit-card"></i>
+                Proceed to Checkout
+            </button>
+
+            <a href="menu.html" class="continue-shopping">
+                <i class="fas fa-arrow-left"></i>
+                Continue Shopping
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+            <h3>Bean Haven Coffee</h3>
+            <p>Premium Coffee Experience</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>Menu</p>
+            <p>Contact</p>
+        </div>
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <a href="#"><i class="fab fa-facebook"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-twitter"></i></a>
+
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Bean Haven Coffee. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script>
+
+function increase(btn){
+
+let qty = btn.parentElement.querySelector("span");
+
+qty.innerText = parseInt(qty.innerText)+1;
+
+}
+
+function decrease(btn){
+
+let qty = btn.parentElement.querySelector("span");
+
+let value = parseInt(qty.innerText);
+
+if(value>1){
+
+qty.innerText=value-1;
+
+}
+
+}
+
+// Remove Item
+
+document.querySelectorAll(".remove-btn").forEach(button=>{
+
+button.onclick=function(){
+
+this.parentElement.remove();
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

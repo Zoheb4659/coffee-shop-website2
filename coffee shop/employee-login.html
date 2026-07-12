@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Employee Login | Bean Haven Coffee</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<link rel="stylesheet" href="css/employee-login.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header>
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+
+<i class="fas fa-mug-hot"></i>
+
+
+<span>
+Bean Haven
+</span>
+
+
+</div>
+
+
+
+
+<ul class="nav-links">
+
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+
+<li>
+<a href="menu.html">
+Menu
+</a>
+</li>
+
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+
+</ul>
+
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- ================= EMPLOYEE LOGIN ================= -->
+
+
+
+<section class="employee-auth">
+
+
+
+
+
+<div class="employee-left">
+
+
+
+<div class="employee-icon">
+
+
+<i class="fas fa-user-tie"></i>
+
+
+</div>
+
+
+
+<h1>
+Employee Portal
+</h1>
+
+
+
+<p>
+
+Welcome back team member.
+
+Manage orders, customers, inventory, and daily operations.
+
+</p>
+
+
+
+<div class="employee-features">
+
+
+<div>
+
+<i class="fas fa-list-check"></i>
+
+<span>
+Manage Orders
+</span>
+
+</div>
+
+
+
+<div>
+
+<i class="fas fa-boxes-stacked"></i>
+
+<span>
+Inventory Control
+</span>
+
+</div>
+
+
+
+<div>
+
+<i class="fas fa-users"></i>
+
+<span>
+Customer Management
+</span>
+
+</div>
+
+
+
+<div>
+
+<i class="fas fa-chart-line"></i>
+
+<span>
+Sales Reports
+</span>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="employee-login-box">
+
+
+
+<div class="login-header">
+
+
+<i class="fas fa-lock"></i>
+
+
+<h2>
+Employee Login
+</h2>
+
+
+<p>
+Authorized staff only
+</p>
+
+
+</div>
+
+
+
+
+
+<form id="employeeLoginForm">
+
+
+
+
+
+<div class="input-group">
+
+
+<i class="fas fa-id-card"></i>
+
+
+
+<input
+
+type="text"
+
+placeholder="Employee ID"
+
+required>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<i class="fas fa-key"></i>
+
+
+
+<input
+
+type="password"
+
+id="employeePassword"
+
+placeholder="Password"
+
+required>
+
+
+
+
+
+<i class="fas fa-eye"
+
+id="employeeShowPassword">
+
+</i>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="login-options">
+
+
+<label>
+
+
+<input
+
+type="checkbox">
+
+
+Remember Me
+
+
+</label>
+
+
+
+
+<a href="#">
+Forgot Password?
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<button class="login-btn">
+
+
+<i class="fas fa-right-to-bracket"></i>
+
+
+Login To Dashboard
+
+
+</button>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+<div class="security-note">
+
+
+<i class="fas fa-shield-halved"></i>
+
+
+<p>
+
+Your employee account is protected.
+Never share your login credentials.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+
+<footer>
+
+
+
+
+<div class="footer-container">
+
+
+
+<div>
+
+
+<h3>
+Bean Haven Coffee
+</h3>
+
+
+<p>
+Employee Management System
+</p>
+
+
+</div>
+
+
+
+
+<div>
+
+
+<h3>
+Support
+</h3>
+
+
+<p>
+IT Help Desk
+</p>
+
+
+<p>
+support@beanhaven.com
+</p>
+
+
+</div>
+
+
+
+
+<div>
+
+
+<h3>
+Follow Us
+</h3>
+
+
+
+<a href="#">
+<i class="fab fa-facebook"></i>
+</a>
+
+
+<a href="#">
+<i class="fab fa-instagram"></i>
+</a>
+
+
+<a href="#">
+<i class="fab fa-linkedin"></i>
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<p class="copyright">
+
+
+© 2026 Bean Haven Coffee. Employee Portal.
+
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+// Password Visibility
+
+
+const password =
+document.getElementById("employeePassword");
+
+const eye =
+document.getElementById("employeeShowPassword");
+
+
+
+eye.onclick=function(){
+
+
+
+if(password.type==="password"){
+
+
+password.type="text";
+
+
+eye.classList.remove("fa-eye");
+
+
+eye.classList.add("fa-eye-slash");
+
+
+
+}
+
+else{
+
+
+password.type="password";
+
+
+eye.classList.remove("fa-eye-slash");
+
+
+eye.classList.add("fa-eye");
+
+
+
+}
+
+
+
+};
+
+
+
+
+
+
+
+// Demo Employee Login
+
+
+document
+.getElementById("employeeLoginForm")
+.addEventListener("submit",function(e){
+
+
+e.preventDefault();
+
+
+
+alert("Employee login successful!");
+
+
+
+window.location.href="employee-dashboard.html";
+
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
